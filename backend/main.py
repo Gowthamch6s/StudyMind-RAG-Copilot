@@ -3,7 +3,6 @@ import shutil
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from dotenv import load_dotenv
 from pypdf import PdfReader 
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -14,7 +13,6 @@ from langchain_classic.chains.combine_documents import create_stuff_documents_ch
 from langchain_core.prompts import ChatPromptTemplate
 
 # 1. Load Environment Variables Securely
-load_dotenv()
 if not os.getenv("GOOGLE_API_KEY"):
     raise ValueError("GOOGLE_API_KEY is missing! Please add it to your .env file.")
 
