@@ -1,0 +1,15 @@
+# Environments
+.env
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Database
+chroma_db/
+
+# Node/Next.js
+node_modules/
+.next/
